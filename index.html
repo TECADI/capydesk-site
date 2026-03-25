@@ -11,13 +11,13 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="CapyDesk | Unified IT Support & Asset Management"/>
 <meta property="og:description" content="Empower your IT team with CapyDesk. Manage tickets, track hardware via QR Code, and automate complex workflows in a single intuitive platform."/>
-<meta property="og:image" content="https://lh3.googleusercontent.com/aida/ADBb0ujgRGTWPH4D45m1XawNdtg9Astjcb4Fi5TZFDfpz0DAmrne2IDdO2OwFAqSfSynh0jNEd8d9USxkNgeMAR5a4mc-OZiWXJB0mlp4ylgzTy5QYkD6F0kwEKqG8kFO-IbaL1srR4BBHEw5MO7Cr2Lr7exxMCjy4w2sfjRvarmLxQIVfC3qjuyT6S6S7Cr99J1ixsDRACS06tFqOo0Dwea70xxoFv748pb3QMvvHnAhkuycc_ZMryAaUF3BdKDJ73k7FqKIo4sXM7h"/>
+<meta property="og:image" content="images/screenshot_02_dashboard.png"/>
 <meta property="og:site_name" content="CapyDesk"/>
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="CapyDesk | Unified IT Support & Asset Management"/>
 <meta name="twitter:description" content="Empower your IT team with CapyDesk. Manage tickets, track hardware via QR Code, and automate complex workflows."/>
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/aida/ADBb0ujgRGTWPH4D45m1XawNdtg9Astjcb4Fi5TZFDfpz0DAmrne2IDdO2OwFAqSfSynh0jNEd8d9USxkNgeMAR5a4mc-OZiWXJB0mlp4ylgzTy5QYkD6F0kwEKqG8kFO-IbaL1srR4BBHEw5MO7Cr2Lr7exxMCjy4w2sfjRvarmLxQIVfC3qjuyT6S6S7Cr99J1ixsDRACS06tFqOo0Dwea70xxoFv748pb3QMvvHnAhkuycc_ZMryAaUF3BdKDJ73k7FqKIo4sXM7h"/>
+<meta name="twitter:image" content="images/screenshot_02_dashboard.png"/>
 <!-- Favicon (inline SVG capybara-themed) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23002045'/><text x='50' y='68' text-anchor='middle' font-size='55'>🦫</text></svg>"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -144,6 +144,11 @@
             border-top: 1px solid rgba(248, 188, 75, 0.6);
             border-bottom: 1px solid rgba(248, 188, 75, 0.6);
         }
+        .ribbon-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
         .ribbon-text {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 800;
@@ -151,8 +156,8 @@
             color: #2d1d00;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            display: inline-block;
-            animation: marquee 30s linear infinite;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
         @keyframes marquee {
             0% { transform: translateX(0); }
@@ -247,7 +252,7 @@
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
 <div class="flex items-center gap-8">
 <a class="flex items-center gap-2" href="#" onclick="event.preventDefault(); window.scrollTo({top:0,behavior:'smooth'})">
-<img alt="CapyDesk Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhxNcs9aukg2PWlb6lxp7m2N_mvJQIAMJBJm7LrIQoVPpPV6vNqre446j5oI7Bvex4fBNanCcLY0pgb2DTjgqsu5IPiHgxuNAlTiqRDnncsXMAlLKtgWNeXKcDD8yLvgkVb_LeQaVNbMDwVx-MBpVyi5jzdNjVSPXLo0SV8zXkMjem5Zuy463KBm2A5CmmvingV7KCLDcLh_wRZf_lFGZh0dmwzJyahMAGuX3i__ZpmztGF3--d7Ya2jCZzA2MFT9QFmOFWuCdq"/>
+<img alt="CapyDesk Logo" class="h-10 w-auto" src="images/logo.png"/>
 </a>
 <div class="hidden md:flex items-center gap-6 border-l border-outline-variant/30 pl-6">
 <a class="nav-link relative font-['Plus_Jakarta_Sans'] text-sm font-semibold tracking-tight text-[#1A1C1E] dark:text-[#C4C6CF] hover:text-[#13696A] transition-all duration-200" href="#features" data-i18n="nav_features">Recursos</a>
@@ -261,7 +266,7 @@
 <button id="lang-pt" onclick="setLanguage('pt')" class="px-2 py-1 text-[10px] font-bold rounded bg-primary text-white transition-colors">PT-BR</button>
 <button id="lang-en" onclick="setLanguage('en')" class="px-2 py-1 text-[10px] font-bold rounded text-on-surface-variant hover:bg-surface-container-high transition-colors">EN</button>
 </div>
-<button onclick="openModal('login')" class="hidden sm:block font-['Plus_Jakarta_Sans'] text-sm font-semibold tracking-tight text-[#1A1C1E] dark:text-[#C4C6CF] hover:bg-[#EFEDF1] px-4 py-2 rounded-lg transition-all active:scale-95" data-i18n="nav_login">Entrar</button>
+<a href="https://app.capydesk.com.br" class="hidden sm:block font-['Plus_Jakarta_Sans'] text-sm font-semibold tracking-tight text-[#1A1C1E] dark:text-[#C4C6CF] hover:bg-[#EFEDF1] px-4 py-2 rounded-lg transition-all active:scale-95" data-i18n="nav_login">Entrar</a>
 <button onclick="openModal('trial')" class="hidden sm:block bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-lg font-headline text-sm font-semibold shadow-sm active:scale-95 transition-all" data-i18n="nav_trial">Teste Grátis</button>
 <!-- Mobile hamburger -->
 <button id="hamburger-btn" onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-surface-container-high transition-colors">
@@ -276,14 +281,14 @@
 <a onclick="toggleMobileMenu()" class="font-['Plus_Jakarta_Sans'] text-sm font-semibold py-2 text-[#1A1C1E] hover:text-[#13696A] transition-colors" href="#pricing" data-i18n="nav_pricing">Preços</a>
 <a onclick="toggleMobileMenu()" class="font-['Plus_Jakarta_Sans'] text-sm font-semibold py-2 text-[#1A1C1E] hover:text-[#13696A] transition-colors" href="#contact" data-i18n="nav_contact">Contato</a>
 <div class="flex gap-3 pt-2 border-t border-outline-variant/20">
-<button onclick="openModal('login'); toggleMobileMenu();" class="flex-1 font-['Plus_Jakarta_Sans'] text-sm font-semibold py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all" data-i18n="nav_login">Entrar</button>
+<a href="https://app.capydesk.com.br" class="flex-1 text-center font-['Plus_Jakarta_Sans'] text-sm font-semibold py-2.5 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white transition-all" data-i18n="nav_login">Entrar</a>
 <button onclick="openModal('trial'); toggleMobileMenu();" class="flex-1 bg-gradient-to-br from-primary to-primary-container text-white py-2.5 rounded-lg font-headline text-sm font-semibold" data-i18n="nav_trial">Teste Grátis</button>
 </div>
 </div>
 </div>
 </nav>
 <!-- Hero Section -->
-<header class="relative pt-32 pb-20 overflow-hidden">
+<header class="relative pt-32 pb-20 overflow-visible">
 <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
 <div class="relative z-10">
 <div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold mb-6 tracking-wide uppercase">
@@ -304,19 +309,10 @@
 </button>
 </div>
 </div>
-<div class="relative">
+<div class="relative overflow-visible">
 <div class="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
-<div class="relative rounded-2xl overflow-hidden ambient-shadow border border-white/20 bg-primary-container">
-<img data-i18n-alt="hero_img_alt" alt="Dashboard do CapyDesk em Português" class="w-full h-auto object-cover max-h-[500px] object-top" src="https://lh3.googleusercontent.com/aida/ADBb0ujgRGTWPH4D45m1XawNdtg9Astjcb4Fi5TZFDfpz0DAmrne2IDdO2OwFAqSfSynh0jNEd8d9USxkNgeMAR5a4mc-OZiWXJB0mlp4ylgzTy5QYkD6F0kwEKqG8kFO-IbaL1srR4BBHEw5MO7Cr2Lr7exxMCjy4w2sfjRvarmLxQIVfC3qjuyT6S6S7Cr99J1ixsDRACS06tFqOo0Dwea70xxoFv748pb3QMvvHnAhkuycc_ZMryAaUF3BdKDJ73k7FqKIo4sXM7h"/>
-</div>
-<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl ambient-shadow hidden md:block border border-white/40 max-w-[240px]">
-<div class="flex items-center gap-3 mb-2">
-<div class="w-10 h-10 bg-tertiary-fixed-dim rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">qr_code_2</span>
-</div>
-<span class="font-headline font-bold text-sm" data-i18n="hero_card_title">Ativo Escaneado</span>
-</div>
-<p class="text-xs text-on-surface-variant" data-i18n="hero_card_desc">Mouse Logitech MX Master. Responsável: Paulo Silva.</p>
+<div class="relative rounded-2xl overflow-visible ambient-shadow border border-white/20 bg-transparent h-72 md:h-80 max-w-xs md:max-w-sm mx-auto flex items-center justify-center">
+<img data-i18n-alt="hero_img_alt" alt="Dashboard do CapyDesk em Português" class="h-[200%] max-w-none w-auto drop-shadow-2xl relative z-10" src="images/capydesk_balao.png"/>
 </div>
 </div>
 </div>
@@ -492,13 +488,13 @@
 <div class="hidden lg:block lg:w-1/2">
 <div class="sticky-image-container">
 <div class="relative w-full h-full flex items-center justify-center p-8 bg-surface-container/30 rounded-[3rem] border border-outline-variant/10 overflow-hidden">
-<img alt="Ticket List Mobile" class="mockup-image active" data-mockup="1" src="https://lh3.googleusercontent.com/aida/ADBb0uguCuHn0ppXgT6Nrzbop_IJlFoRY8owQuKtBqMGszALEZqknBSnhx4svTw4wCBtMa8-gL8GJWQ05mqFcPUWj_uiUt6Wf7ywcuLJJvzPF9r1ftsOIZpOVsnxt97WdDyW4PcgF-9m-VSfx4hMnv9jEeh0FwhYvxGnbQQkwMfFCbtpnrtWt0dwkwjEI0G9xxmbMwHZMCbXH3uiVPlssrUS6wzxxOF8Lo2eew7MT7A8eyjnLgm0bZYOsT-mBcDhzyaqeYL9A4HMvBClGQ"/>
-<img alt="Asset Scanner Mobile" class="mockup-image" loading="lazy" data-mockup="2" src="https://lh3.googleusercontent.com/aida/ADBb0ujBD-IIGPKVbfAVtlxjmCYHTGwai7JVgNTCDm9Ox7OG7QHrv03S2y6EPJC28mA5D2M2V9yeF2lKQ-y2W12R8vr5FmgaKhSSe2BbA_O8FxtOW6PlM_SuwlsELWhW1yIOq_CMguQ7dj2X-GgXV0HYQSRxXu2RgM0bukgKjMHQUO1dioCv3flGmwEccotGaSF0TsDdLjHaRa0X10G2jqZb7vrhvbbChZQ4YkZgTrJ1xGkat4rOR5rJfRiL00iznLGfX1kJRTYnynRybw"/>
-<img alt="Workflow Automation" class="mockup-image" loading="lazy" data-mockup="3" src="https://lh3.googleusercontent.com/aida/ADBb0uhkGg2U9lY3g2rTFw8Dqfuje7aELOOW5WAVFmmvykehg0D_MWfBFt7_p_GpoY23G5Z-ikjyjprBLLm3qHC2xIKHHf3orgqnU0utqps_6wZbCrRqqAnvEcBl6Z7Hoo2HmFPJHNaHIYpZj0Ap__megwXy2d_zRkm-tZb4ZNOgzflmSYWfKN6SCUTw2gcuDO4RYVNjTYSCsv0Pq2FOwFROTnMNYBs4JZAT0XmKd6ACafbCopKu3bfuYS4hPof1i3JMGkw5JVGPbuDZ"/>
-<img alt="Service Catalog" class="mockup-image" loading="lazy" data-mockup="4" src="https://lh3.googleusercontent.com/aida/ADBb0uguCuHn0ppXgT6Nrzbop_IJlFoRY8owQuKtBqMGszALEZqknBSnhx4svTw4wCBtMa8-gL8GJWQ05mqFcPUWj_uiUt6Wf7ywcuLJJvzPF9r1ftsOIZpOVsnxt97WdDyW4PcgF-9m-VSfx4hMnv9jEeh0FwhYvxGnbQQkwMfFCbtpnrtWt0dwkwjEI0G9xxmbMwHZMCbXH3uiVPlssrUS6wzxxOF8Lo2eew7MT7A8eyjnLgm0bZYOsT-mBcDhzyaqeYL9A4HMvBClGQ"/>
-<img alt="Omnichannel Ticket Detail" class="mockup-image" loading="lazy" data-mockup="5" src="https://lh3.googleusercontent.com/aida/ADBb0ujMPfwIp_Owjs9uVdIhUHC2vH36QX_SbcuRhSqJ538037WoH-aHwKZ5HRb-7dtgeIfP4d_Y3EJOCSmPDOS10y3ZBf7ctQT8Tl88sKtmtlhxcp11dsxboLEhovO_JBCMhlPv15MF6eIAGxPuI7TejGYcWbrud0RguOR_2LWATZKcPN7iXCOpYsiXGPCES9nYKsqrXPw4ef9GBFaBxKsEFyD8AaWqcNzapoC794m6iNzUxXpfKahC2TLAB4EZ7HdzBYwct2lwNm3O6A"/>
-<img alt="SLA Analytics" class="mockup-image" loading="lazy" data-mockup="6" src="https://lh3.googleusercontent.com/aida/ADBb0uieaiejouZCZl-9ij3KJyKdeJ00M_Zp0Kn3fSDjb7VNdHQKrtu5wOmbcJSE951H24nIKtfqiK-g52chynp0lAZBDDSo8exVIis2uc0glbFLhByyJ7g9FSBOj2yDZ_q_ntN3yMQealcENzfFsqHv6mVAxBwXRwMOmaqQd81mj42SXYEnM4AJ3nEls8i8-T5LEKbBnX50eVxTTd3TSGHMWCwRq3NHzMCqLE49mmL_6LfquQDtqRp2z8Hw2ropbA_n7JSxgBeke8pjdg"/>
-<img alt="Mobile Login Interface" class="mockup-image" loading="lazy" data-mockup="7" src="https://lh3.googleusercontent.com/aida/ADBb0ujBD-IIGPKVbfAVtlxjmCYHTGwai7JVgNTCDm9Ox7OG7QHrv03S2y6EPJC28mA5D2M2V9yeF2lKQ-y2W12R8vr5FmgaKhSSe2BbA_O8FxtOW6PlM_SuwlsELWhW1yIOq_CMguQ7dj2X-GgXV0HYQSRxXu2RgM0bukgKjMHQUO1dioCv3flGmwEccotGaSF0TsDdLjHaRa0X10G2jqZb7vrhvbbChZQ4YkZgTrJ1xGkat4rOR5rJfRiL00iznLGfX1kJRTYnynRybw"/>
+<img alt="Ticket List Mobile" class="mockup-image active" data-mockup="1" src="images/screenshot_03_ticket_list.png"/>
+<img alt="Asset Scanner Mobile" class="mockup-image" loading="lazy" data-mockup="2" src="images/screenshot_06_asset_scanner.png"/>
+<img alt="Workflow Automation" class="mockup-image" loading="lazy" data-mockup="3" src="images/screenshot_05_settings.png"/>
+<img alt="Service Catalog" class="mockup-image" loading="lazy" data-mockup="4" src="images/screenshot_03_ticket_list.png"/>
+<img alt="Omnichannel Ticket Detail" class="mockup-image" loading="lazy" data-mockup="5" src="images/screenshot_04_ticket_detail.png"/>
+<img alt="SLA Analytics" class="mockup-image" loading="lazy" data-mockup="6" src="images/screenshot_02_dashboard.png"/>
+<img alt="Mobile Login Interface" class="mockup-image" loading="lazy" data-mockup="7" src="images/screenshot_01_login.png"/>
 </div>
 </div>
 </div>
@@ -508,9 +504,9 @@
 <section class="py-24 bg-surface-container-low relative overflow-hidden z-10" id="pricing">
 <!-- Large Diagonal Section Ribbon -->
 <div class="large-section-ribbon">
-<div class="ribbon-text" data-i18n="ribbon_text">
-            Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve
-        </div>
+<div class="ribbon-track">
+<span class="ribbon-text" data-i18n="ribbon_text">Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  </span><span class="ribbon-text" data-i18n="ribbon_text">Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  </span>
+</div>
 </div>
 <div class="max-w-7xl mx-auto px-8 relative z-10">
 <div class="text-center mb-16">
@@ -733,8 +729,8 @@
 <footer class="bg-[#EFEDF1] dark:bg-[#1A1C1E] w-full border-t-0 rounded-t-[2rem] mt-20 relative z-10">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 py-16 max-w-7xl mx-auto">
 <div class="col-span-2 md:col-span-1">
-<img alt="CapyDesk Logo" class="h-10 w-auto mb-4" src="https://lh3.googleusercontent.com/aida/ADBb0uhxNcs9aukg2PWlb6lxp7m2N_mvJQIAMJBJm7LrIQoVPpPV6vNqre446j5oI7Bvex4fBNanCcLY0pgb2DTjgqsu5IPiHgxuNAlTiqRDnncsXMAlLKtgWNeXKcDD8yLvgkVb_LeQaVNbMDwVx-MBpVyi5jzdNjVSPXLo0SV8zXkMjem5Zuy463KBm2A5CmmvingV7KCLDcLh_wRZf_lFGZh0dmwzJyahMAGuX3i__ZpmztGF3--d7Ya2jCZzA2MFT9QFmOFWuCdq"/>
-<p class="font-['Inter'] text-sm leading-relaxed text-[#1A1C1E]/70 dark:text-[#C4C6CF] mb-6" data-i18n="footer_tagline">Criado para o executivo moderno. Simplificando operações de TI com inteligência e empatia.</p>
+<img alt="CapyDesk Logo" class="h-20 w-auto mb-4" src="images/logo_footer.png"/>
+<p class="font-['Inter'] text-sm leading-relaxed text-[#1A1C1E]/70 dark:text-[#C4C6CF] mb-6" data-i18n="footer_tagline">Simplificando operações de TI com inteligência e empatia.</p>
 <div class="flex gap-4">
 <span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary">public</span>
 <span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary">hub</span>
@@ -761,7 +757,7 @@
 </div>
 </div>
 <div class="border-t border-outline-variant/30 py-8 px-12 max-w-7xl mx-auto">
-<p class="font-['Inter'] text-xs leading-relaxed text-[#1A1C1E]/50 dark:text-[#C4C6CF]/50 text-center" data-i18n="footer_copyright">&copy; 2024 CapyDesk Inc. Desenvolvido para a TI moderna.</p>
+<p class="font-['Inter'] text-xs leading-relaxed text-[#1A1C1E]/50 dark:text-[#C4C6CF]/50 text-center" data-i18n="footer_copyright">&copy; 2026 CapyDesk Inc.</p>
 </div>
 </footer>
 
@@ -840,7 +836,7 @@
             f6_tag: "Data Driven", f6_title: "Produtividade do Agente", f6_desc: "Métricas de performance em tempo real para otimizar sua equipe.", f6_item1: "Painéis de conformidade de SLA",
             f7_tag: "Mobilidade", f7_title: "App Mobile Nativo", f7_desc: "Gestão na palma da mão para técnicos de campo e usuários.", f7_item1: "Push notifications e modo offline",
             // Pricing
-            ribbon_text: "Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve",
+            ribbon_text: "Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  ",
             pricing_title: "Preços Simples e Transparentes",
             pricing_monthly: "Mensal",
             pricing_annual: "Anual",
@@ -866,11 +862,11 @@
             form_submit: "Solicitar Contato",
             form_sending: "Enviando...",
             // Footer
-            footer_tagline: "Criado para o executivo moderno. Simplificando operações de TI com inteligência e empatia.",
+            footer_tagline: "Simplificando operações de TI com inteligência e empatia.",
             footer_product: "Produto", footer_features: "Recursos", footer_pricing: "Preços", footer_api: "API",
             footer_resources: "Recursos", footer_docs: "Documentação", footer_help: "Central de Ajuda", footer_status: "Status do Sistema",
             footer_legal: "Legal", footer_privacy: "Privacidade", footer_terms: "Termos de Uso", footer_security: "Segurança",
-            footer_copyright: "\u00a9 2024 CapyDesk Inc. Desenvolvido para a TI moderna.",
+            footer_copyright: "\u00a9 2026 CapyDesk Inc.",
             // Modals
             modal_trial_title: "Iniciar Teste Grátis",
             modal_trial_body: "Crie sua conta e comece a usar o CapyDesk gratuitamente por 14 dias. Nenhum cartão de crédito necessário.",
@@ -956,7 +952,7 @@
             f6_tag: "Data Driven", f6_title: "Agent Productivity", f6_desc: "Real-time performance metrics to optimize your team.", f6_item1: "SLA compliance dashboards",
             f7_tag: "Mobility", f7_title: "Native Mobile App", f7_desc: "Management in the palm of your hand for field technicians and users.", f7_item1: "Push notifications and offline mode",
             // Pricing
-            ribbon_text: "Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon",
+            ribbon_text: "Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  ",
             pricing_title: "Simple & Transparent Pricing",
             pricing_monthly: "Monthly",
             pricing_annual: "Annual",
@@ -982,11 +978,11 @@
             form_submit: "Request Contact",
             form_sending: "Sending...",
             // Footer
-            footer_tagline: "Built for the modern executive. Simplifying IT operations with intelligence and empathy.",
+            footer_tagline: "Simplifying IT operations with intelligence and empathy.",
             footer_product: "Product", footer_features: "Features", footer_pricing: "Pricing", footer_api: "API",
             footer_resources: "Resources", footer_docs: "Documentation", footer_help: "Help Center", footer_status: "System Status",
             footer_legal: "Legal", footer_privacy: "Privacy", footer_terms: "Terms of Use", footer_security: "Security",
-            footer_copyright: "\u00a9 2024 CapyDesk Inc. Built for modern IT.",
+            footer_copyright: "\u00a9 2026 CapyDesk Inc.",
             // Modals
             modal_trial_title: "Start Free Trial",
             modal_trial_body: "Create your account and start using CapyDesk free for 14 days. No credit card required.",
@@ -1152,8 +1148,8 @@
             html = `
                 <p class="text-on-surface-variant mb-6">${t.modal_trial_body}</p>
                 <form onsubmit="handleModalForm(event, 'trial')" class="space-y-4">
-                    <input required type="text" placeholder="${t.modal_trial_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
-                    <input required type="email" placeholder="${t.modal_trial_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="text" name="name" placeholder="${t.modal_trial_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="email" name="email" placeholder="${t.modal_trial_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
                     <button type="submit" class="w-full bg-secondary text-white py-4 rounded-xl font-headline font-bold text-lg hover:shadow-xl hover:shadow-secondary/20 transition-all active:scale-95">${t.modal_trial_submit}</button>
                 </form>`;
         } else if (type === 'demo') {
@@ -1161,9 +1157,9 @@
             html = `
                 <p class="text-on-surface-variant mb-6">${t.modal_demo_body}</p>
                 <form onsubmit="handleModalForm(event, 'demo')" class="space-y-4">
-                    <input required type="text" placeholder="${t.modal_demo_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
-                    <input required type="email" placeholder="${t.modal_demo_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
-                    <input type="text" placeholder="${t.modal_demo_company}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="text" name="name" placeholder="${t.modal_demo_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="email" name="email" placeholder="${t.modal_demo_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input type="text" name="company" placeholder="${t.modal_demo_company}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
                     <button type="submit" class="w-full bg-secondary text-white py-4 rounded-xl font-headline font-bold text-lg hover:shadow-xl hover:shadow-secondary/20 transition-all active:scale-95">${t.modal_demo_submit}</button>
                 </form>`;
         } else if (type === 'login') {
@@ -1183,9 +1179,9 @@
             html = `
                 <p class="text-on-surface-variant mb-6">${t.modal_sales_body}</p>
                 <form onsubmit="handleModalForm(event, 'sales')" class="space-y-4">
-                    <input required type="text" placeholder="${t.modal_sales_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
-                    <input required type="email" placeholder="${t.modal_sales_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
-                    <input type="text" placeholder="${t.modal_sales_company}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="text" name="name" placeholder="${t.modal_sales_name}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input required type="email" name="email" placeholder="${t.modal_sales_email}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
+                    <input type="text" name="company" placeholder="${t.modal_sales_company}" class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-secondary/20 placeholder:text-outline-variant"/>
                     <button type="submit" class="w-full bg-secondary text-white py-4 rounded-xl font-headline font-bold text-lg hover:shadow-xl hover:shadow-secondary/20 transition-all active:scale-95">${t.modal_sales_submit}</button>
                 </form>`;
         }
@@ -1202,16 +1198,43 @@
         document.body.style.overflow = '';
     }
 
-    function handleModalForm(event, type) {
+    async function handleModalForm(event, type) {
         event.preventDefault();
         const t = translations[currentLang];
-        let message = '';
-        if (type === 'trial') message = t.toast_trial_success;
-        else if (type === 'demo') message = t.toast_demo_success;
-        else if (type === 'login') message = t.toast_login_success;
-        else if (type === 'sales') message = t.toast_sales_success;
-        closeModal();
-        showToast(message);
+        const form = event.target;
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+
+        btn.disabled = true;
+        btn.textContent = t.form_sending || '...';
+
+        const formData = new FormData(form);
+        formData.append('_subject', 'CapyDesk Site - ' + type);
+        formData.append('form_type', type);
+
+        try {
+            const response = await fetch('https://formspree.io/f/mnjgyzpd', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: formData
+            });
+
+            let message = '';
+            if (response.ok) {
+                if (type === 'trial') message = t.toast_trial_success;
+                else if (type === 'demo') message = t.toast_demo_success;
+                else if (type === 'sales') message = t.toast_sales_success;
+                closeModal();
+                showToast(message);
+            } else {
+                showToast(t.toast_contact_error);
+            }
+        } catch (err) {
+            showToast(t.toast_contact_error);
+        }
+
+        btn.disabled = false;
+        btn.textContent = originalText;
     }
 
     // ==========================================
