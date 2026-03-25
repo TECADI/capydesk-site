@@ -144,6 +144,11 @@
             border-top: 1px solid rgba(248, 188, 75, 0.6);
             border-bottom: 1px solid rgba(248, 188, 75, 0.6);
         }
+        .ribbon-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
         .ribbon-text {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 800;
@@ -151,8 +156,8 @@
             color: #2d1d00;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            display: inline-block;
-            animation: marquee 30s linear infinite;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
         @keyframes marquee {
             0% { transform: translateX(0); }
@@ -499,9 +504,9 @@
 <section class="py-24 bg-surface-container-low relative overflow-hidden z-10" id="pricing">
 <!-- Large Diagonal Section Ribbon -->
 <div class="large-section-ribbon">
-<div class="ribbon-text" data-i18n="ribbon_text">
-            Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve
-        </div>
+<div class="ribbon-track">
+<span class="ribbon-text" data-i18n="ribbon_text">Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  </span><span class="ribbon-text" data-i18n="ribbon_text">Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  </span>
+</div>
 </div>
 <div class="max-w-7xl mx-auto px-8 relative z-10">
 <div class="text-center mb-16">
@@ -831,7 +836,7 @@
             f6_tag: "Data Driven", f6_title: "Produtividade do Agente", f6_desc: "Métricas de performance em tempo real para otimizar sua equipe.", f6_item1: "Painéis de conformidade de SLA",
             f7_tag: "Mobilidade", f7_title: "App Mobile Nativo", f7_desc: "Gestão na palma da mão para técnicos de campo e usuários.", f7_item1: "Push notifications e modo offline",
             // Pricing
-            ribbon_text: "Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve   •   Vendas em breve   •   Em breve",
+            ribbon_text: "Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  Vendas em breve  •  Em breve  •  ",
             pricing_title: "Preços Simples e Transparentes",
             pricing_monthly: "Mensal",
             pricing_annual: "Anual",
@@ -947,7 +952,7 @@
             f6_tag: "Data Driven", f6_title: "Agent Productivity", f6_desc: "Real-time performance metrics to optimize your team.", f6_item1: "SLA compliance dashboards",
             f7_tag: "Mobility", f7_title: "Native Mobile App", f7_desc: "Management in the palm of your hand for field technicians and users.", f7_item1: "Push notifications and offline mode",
             // Pricing
-            ribbon_text: "Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon   •   Coming soon",
+            ribbon_text: "Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  Coming soon  •  ",
             pricing_title: "Simple & Transparent Pricing",
             pricing_monthly: "Monthly",
             pricing_annual: "Annual",
